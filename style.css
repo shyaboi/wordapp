@@ -1,7 +1,25 @@
+body{
+    animation: bg-ani 60s infinite alternate;
+    overflow: hidden;
+    background: rgb(25, 0, 1);
+    background: linear-gradient(90deg, rgba(25, 0, 1, 1) 0%, rgba(121, 9, 15, 1) 35%, rgba(228, 124, 129, 1) 100%);
+    background-size: 350%;
+}
+
+@keyframes bg-ani {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    
     padding: 10px;
 }
 
@@ -17,4 +35,4 @@
 
 #apiSyn {
     word-break: break-all
-    }
+}
