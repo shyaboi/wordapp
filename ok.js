@@ -27,7 +27,14 @@ function dicAPI(){
     .then(response => response.json())
     // .then(data => console.log(data[0].shortdef))
     .then(data => document.getElementById('apiDic').innerHTML = "<p>" + data[0].shortdef + " " + "<h4>Definition 2: </h4>" + data[1].shortdef + "</p>");
+}
 
+function anaAPI(){
+    let ward = document.getElementById('strInput').value
+    fetch(`http://www.anagramica.com/best/:${ward}`)
+    .then(response => response.json())
+    // .then(data => console.log(data[0].shortdef))
+    .then(data => document.getElementById('apiAna').innerHTML = "<p>" + data[0].shortdef + " " + "<h4>Definition 2: </h4>" + data[1].shortdef + "</p>");
 }
 
  function rev() {

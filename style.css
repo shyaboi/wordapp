@@ -1,8 +1,9 @@
-body{
+body {
     animation: bg-ani 60s infinite alternate;
     overflow: hidden;
-    background: rgb(25, 0, 1);
-    background: linear-gradient(90deg, rgba(25, 0, 1, 1) 0%, rgba(121, 9, 15, 1) 35%, rgba(228, 124, 129, 1) 100%);
+    background: #FC5C7D;
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
     background-size: 350%;
 }
 
@@ -19,7 +20,7 @@ body{
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    
+
     padding: 10px;
 }
 
