@@ -1,10 +1,17 @@
 body {
     animation: bg-ani 60s infinite alternate;
-    overflow: hidden;
     background: #FC5C7D;
     background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
     background: linear-gradient(to right, #6A82FB, #FC5C7D);
     background-size: 350%;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+h4{
+    font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 @keyframes bg-ani {
@@ -17,23 +24,69 @@ body {
     }
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
 
-    padding: 10px;
+
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+
+}
 
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
-    margin: 1em;
+    margin: .5em;
     padding: 20px;
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
 }
 
-#apiSyn {
-    word-break: break-all
+.grid-item-wide1 {
+    grid-column: 1 / span 6;
+    grid-row: 3;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    margin: 2em;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    word-break: break-all;
+
+}
+
+.grid-item-wide2 {
+    word-break: break-all;
+    grid-column: 1 / span 6;
+    grid-row: 4;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    margin: 2em;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
 }

@@ -1,5 +1,15 @@
 // input word variable
 const ward = ''
+
+function reLd() {
+    
+    location.reload();
+}
+
+
+
+
+
 document.getElementById('strInput').onkeydown = function(e){
     if(e.keyCode == 13){
       // submit
@@ -8,6 +18,11 @@ document.getElementById('strInput').onkeydown = function(e){
       rev()
       thesAPI()
       dicAPI()
+      sorte()
+      revSorte()
+      letterCount()
+
+    //   anaAPI()
       return ward
     }
  };
@@ -29,12 +44,38 @@ function dicAPI(){
     .then(data => document.getElementById('apiDic').innerHTML = "<p>" + data[0].shortdef + " " + "<h4>Definition 2: </h4>" + data[1].shortdef + "</p>");
 }
 
-function anaAPI(){
+// function anaAPI(){
+//     let ward = document.getElementById('strInput').value
+//     fetch(`http://www.anagramica.com/best/:${ward}`)
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+// }
+
+function letterCount() {
     let ward = document.getElementById('strInput').value
-    fetch(`http://www.anagramica.com/best/:${ward}`)
-    .then(response => response.json())
-    // .then(data => console.log(data[0].shortdef))
-    .then(data => document.getElementById('apiAna').innerHTML = "<p>" + data[0].shortdef + " " + "<h4>Definition 2: </h4>" + data[1].shortdef + "</p>");
+    word = ward.length
+    // console.log(word)
+    document.getElementById("letterCount").innerHTML = `<h2>${word}</h2>`
+
+}
+
+
+function sorte() {
+    let ward = document.getElementById('strInput').value
+    const word = ward
+    const sortWord = word.toLowerCase().split("").sort().join("");
+    // console.log(sortWord)
+    document.getElementById("sorted").innerHTML = `${sortWord}`
+
+}
+
+function revSorte() {
+    let ward = document.getElementById('strInput').value
+    const word = ward
+    const sortWord = word.toLowerCase().split("").sort().reverse("").join("");
+    // console.log(sortWord)
+    document.getElementById("revSorted").innerHTML = `${sortWord}`
+
 }
 
  function rev() {

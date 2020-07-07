@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
     <title>String Practice</title>
   </head>
   <body>
+      <button class="myButton" id="reloadButt" onclick="reLd()">Reload Form</button>
     <div class="grid-container">
-      <input class="grid-item" type="text" id="strInput" value="" placeholder="Press Enter To Test Your Word"/>
-      <div class="grid-item"><h4>Is this a Palindrome?</h4><div id="pal"></div></div>
-      <div class="grid-item" id="outputDiv2"><h4>Word Reversed</h4><div id="outputStrRev"></div></div>
-      <div class="grid-item" id="outputDiv3"><h4>Synonyms</h4><div id="apiSyn"></div></div>
-      <div class="grid-item" id="outputDiv4"><h4>Definition: </h4><div id="apiDic"></div></div>
-      <div class="grid-item" id="outputDiv5"><h4>Anagrams: </h4><div id="apiAna"></div></div>
+      <input class="grid-item" type="text" id="strInput" value="" placeholder="Enter Word Here"/>
+      <div class="grid-item item1" id="outputDiv1"><h4>Is this a Palindrome?</h4><div id="pal"></div></div>
+      <div class="grid-item item2" id="outputDiv2"><h4>Word Reversed</h4><div id="outputStrRev"></div></div>
+      <div class="grid-item" id="outputDiv3"><h4>Number of Letter In Word</h4><div id="letterCount"></div></div>
+      <div class="grid-item" id="outputDiv4"><h4>Letters Sorted A~Z:</h4><div id="sorted"></div></div>
+      <div class="grid-item" id="outputDiv5"><h4>Letters Sorted Z~A:</h4><div id="revSorted"></div></div>
+      <div class="grid-item-wide1" id="outputDiv6"><h4>Synonyms</h4><div id="apiSyn"></div></div>
+      <div class="grid-item-wide2" id="outputDiv7"><h4>Definition: </h4><div id="apiDic"></div></div>
+
+
 
     </div>
   </body>
